@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/nasi-kuning.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ibu Habsyi</title>
+    <style>
+      h1 {
+        font-family: cursive;
+      }
+      .option.selected {
+        background-color: cornsilk;
+      }
+      /* Default style */
+      #titleApp {
+        min-height: 65vh; /* Tinggi default */
+      }
+
+      /* Media query untuk layar dengan lebar maksimum 768px (misalnya untuk perangkat mobile) */
+      @media screen and (max-width: 768px) {
+        #titleApp {
+          min-height: 50vh; /* Tinggi untuk layar mobile */
+        }
+      }
+    </style>
+  </head>
+  <body class="text-amber-700">
+    <div
+      id="titleApp"
+      class="w-full bg-amber-200 flex items-center justify-center bg-no-repeat"
+      style="background-image: url(./images/indofood.png)"
+    >
+      <h1
+        class="text-4xl md:text-6xl text-center font-bold"
+        style="text-shadow: 1px 2px 2px white"
+      >
+        Ibu habsyi
+      </h1>
+    </div>
+    <div class="md:hidden flex justify-center bg-amber-200">
+      <img src="./images/scroll-down.png" alt="" width="50" />
+    </div>
+    <div class="px-2 md:px-52">
+      <h1
+        class="text-4xl md:text-6xl text-center font-bold py-5"
+        style="text-shadow: 1px 2px 3px rgb(105, 105, 105)"
+      >
+        My Menu
+      </h1>
+      <div class="flex justify-center my-2">
+        <div class="rounded-xl overflow-x-auto flex items-center bg-gray-200">
+          <!-- Daftar menu -->
+          <ul id="menuList" class="flex items-center gap-4 px-4 h-12"></ul>
+        </div>
+      </div>
+      <div class="block md:flex justify-center">
+        <div class="md:block flex justify-center">
+          <img
+            src="./images/menu-nasi-kepal.jpeg"
+            id="imageMenu"
+            alt=""
+            class="py-5 w-32 md:w-96"
+          />
+        </div>
+        <div
+          class="ml-0 md:ml-5 block md:grid grid-cols-2 gap-4 md:w-full"
+          id="menus"
+        ></div>
+      </div>
+    </div>
+    <footer class="bg-amber-800 text-white py-8 px-4">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-4 md:mb-0">
+          <p class="text-xl font-bold">Hubungi Kami</p>
+          <p class="text-lg">
+            WhatsApp:
+            <a href="https://wa.me/6285213030554" class="text-blue-400"
+              >0852-1303-0554</a
+            >
+          </p>
+        </div>
+        <div>
+          <p class="text-lg">&copy; Ibu Habsyi</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="listmenu.js"></script>
+  </body>
+</html>
